@@ -1,0 +1,324 @@
+@use 'variables';
+@use 'mixins';
+@use 'base';
+@use 'layout';
+@use 'components';
+
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3E3F40;
+}
+h1{
+    color: whitesmoke;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+    background-color: #242526;
+    font-family: "Lacquer";
+    font-size: oblique;
+    text-align: center;
+}
+
+
+nav ul a {
+    color: white;
+    text-decoration: none;   
+    font-size: 20px;
+    margin: 0 20px;
+}
+
+nav ul {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    justify-content: center;
+    background-color: #242526;
+}
+
+nav ul li {
+    margin: 0 20px;
+    color: white;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+    text-decoration: none;
+    font-family: "Lacquer";
+}
+
+h2{
+    font-family: "Lacquer";
+    text-align: center;
+    margin-top: 30px;
+    color: whitesmoke;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+#BANNER{
+    width: 100%;
+    height: 400PX;
+    object-fit: cover;
+}
+
+main section {
+    display: flex;
+    margin: 0 20px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BOTONSPOTI {
+    text-decoration: none;
+    background-color: #1db954;
+    border-radius: 5px;
+    color: #FFFFFF;
+    text-shadow: 0 0 5px #fff, 0 0 10px #1db954, 0 0 20px #1db954, 0 0 40px #1db954;
+    font-family: "Lacquer";
+    font-weight: bold;
+    padding: 7px 10px;
+}
+
+.BOTONSPOTI:hover {
+    transform: scale(1.05);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+
+
+footer {
+    text-align: center;
+    margin-top: 250px;
+    color: whitesmoke;
+}
+
+.DISCOGRAFIA{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.footer-noinicio{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.GALERIA{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.GALERIA img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.mihistoria{
+    font-size: 64px;
+}
+
+h3 {
+   font-family: "Lacquer";
+    text-align: center;
+    margin-top: 30px;
+    color: whitesmoke;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff; 
+    margin: 30px;
+}
+
+.CONTACTO{
+    font-size: 64px;
+}
+
+.mail{
+    font-size: 45px;
+}
+
+.REDES {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.REDES img{
+    width: 80px;
+    height: auto;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.galeria-img {
+  width: 100%;             
+  aspect-ratio: 1 / 1;      
+  object-fit: cover;        
+  border-radius: 15px;      
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+  transition: transform 0.3s ease; 
+}
+
+.galeria-img:hover {
+  transform: scale(1.05);   
+}
+
+body {
+  overflow-x: hidden;
+}
+
+article img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   
+  object-fit: cover;     
+  border-radius: 8px;    
+}
+
+nav .nav-link {
+  color: whitesmoke !important;   
+  font-family: "Lacquer";
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+nav .nav-link:hover {
+  transform: scale(1.1);
+  color: whitesmoke !important;   
+}
+
+nav.navbar {
+  background-color: #242526;   
+  width: 100%;
+  margin-top: 0;
+}
+
+nav.navbar .nav {
+  background: none;
+  justify-content: center;
+  width: 100%;
+}
+
+header h1 {
+    margin-bottom: 0;
+}
+
+:root { --font-wlk: "Lacquer", cursive; }
+
+section .btn.btn-success {
+  font-family: var(--font-wlk) !important;
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  line-height: 1;
+  text-shadow: 0 0 5px #fff, 0 0 10px #1db954, 0 0 20px #1db954, 0 0 40px #1db954;
+}
+
+section .btn.btn-success:hover {
+    transform: scale(1.1);
+    color: whitesmoke !important;
+}
+
+.img-square {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+header .container-fluid {
+    background-color: #242526;
+}
+
+header nav ul {
+    flex-wrap: wrap;
+}
+
+
+.uniform-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+.DISCOGRAFIA {
+    display: block !important;
+}
+
+.DISCOGRAFIA .row {
+    margin: 0 auto;
+}
+
+.DISCOGRAFIA article {
+    margin-bottom: 20px;
+}
+
+
+.BOTONSPOTI {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    header nav ul {
+        justify-content: center !important;
+    }
+    
+    header nav ul li {
+        margin: 5px 10px !important;
+    }
+    
+    .uniform-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header nav ul li {
+        margin: 3px 0 !important;
+    }
+    
+    .uniform-image {
+        height: 180px;
+    }
+    
+    .BOTONSPOTI {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
