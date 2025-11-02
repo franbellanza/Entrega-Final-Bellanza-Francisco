@@ -1,0 +1,17 @@
+@mixin button($bg, $fg: #fff) {
+  background: $bg;
+  color: $fg;
+  padding: .6rem 1.2rem;
+  border-radius: $radius-base;
+  border: none;
+  cursor: pointer;
+  transition: all .3s ease;
+  &:hover { transform: translateY(-2px); }
+}
+
+
+
+@mixin mq($min) {
+  @media (min-width: $min) { @content; }
+}
+

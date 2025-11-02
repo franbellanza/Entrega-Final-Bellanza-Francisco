@@ -1,0 +1,12 @@
+.hero {
+  background: linear-gradient(90deg, #ff7a7a, #7ab3ff);
+  background-size: 200% 200%;
+  animation: gradient 5s ease-in-out infinite alternate;
+}
+@keyframes gradient {
+  from { background-position: 0% 50%; }
+  to   { background-position: 100% 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero { animation: none; }
+}
